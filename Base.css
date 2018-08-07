@@ -1,0 +1,210 @@
+
+@import url("../../../wp-includes/css/dashicons.min.css?ver=4.8.1");
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#Viewport {
+	margin: -200px -200px;
+	padding: 0px;
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+    left: 50%;
+	z-index: 10;
+}
+
+#Mask {
+	margin: -200px -200px;
+	padding: 0px;
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+    left: 50%;
+	z-index: 20;
+	background-image: url("Mask.png");
+	background-size: cover;
+}
+
+#Maze {
+	margin: 0px;
+	padding: 0px;
+	width: 9600px;
+	height: 9600px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+.Block {
+	margin: 0px;
+	padding: 0px;
+	width: 400px;
+	height: 400px;
+	border: 0px solid black;
+	background-size: cover;
+}
+
+.Overlay {
+	margin: 0px;
+	padding: 0px;
+	width: 400px;
+	height: 400px;
+	background-size: cover;
+}
+
+#Controls {
+    margin: 0px -50%;
+    padding: 0px;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    z-index: 24;
+    opacity: 0.75;
+    color: #fff;
+}
+
+#Controls div {
+    border:  1px solid white;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    font: 400 24px/1.3 dashicons;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none!important;
+    text-align: center;
+}
+
+#Controls #Up {
+    bottom: 34px;
+    left: 34px;
+}
+
+#Controls #Up::before {
+    content: "\f142";
+}
+
+#Controls #Left {
+    bottom: 0px;
+    left: 0px;
+}
+
+#Controls #Left::before {
+    content: "\f141";
+}
+
+#Controls #Down {
+    bottom: 0px;
+    left: 34px;
+}
+
+#Controls #Down::before {
+    content: "\f140";
+}
+
+#Controls #Right {
+    bottom: 0px;
+    left: 68px;
+}
+
+#Controls #Right::before {
+    content: "\f139";
+}
+
+#Controls #Space {
+    bottom: 0px;
+    left: 110px;
+    width: 98px;
+    font: normal 12px "Arial", sans-serif;
+    line-height: 30px;
+}
+
+#Controls #Space::before {
+    content: "CLICK";
+    text-transform: uppercase;
+}
+
+#Curtain {
+	margin: -200px -50%;
+	padding: 0px;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+    left: 50%;
+	z-index: 25;
+    background-color: #000000;
+}
+
+#Help {
+    margin: -200px -50%;
+    padding: 0px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 50;
+}
+
+.Window {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 20px;
+    color: #fff;
+    border: 1px solid white;
+    font: normal 12px "Arial", sans-serif;
+    opacity: 0.75;
+}
+
+#Help h1 {
+    text-align: center;
+}
+
+#Help #Start {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: auto;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#Help #Start::before {
+    content: "OK";
+    text-transform: uppercase;
+}
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.button:hover {
+    color: #000;
+    background-color: #fff;
+}
